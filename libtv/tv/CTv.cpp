@@ -1244,7 +1244,6 @@ int CTv::playDtvProgramUnlocked (const char *feparas, int mode, int freq, int pa
     }
 
     CFrontEnd::FEParas fp(feparas);
-
     SetSourceSwitchInputLocked(m_source_input_virtual, SOURCE_DTV);
 
     FeMode = fp.getFEMode().getBase();
@@ -2116,6 +2115,7 @@ int CTv::StopTvLock ( void )
 
         /* release ATV/DTV early */
         mFrontDev->setMode(TV_FE_AUTO);
+        mFrontDev->Close();
         tryReleasePlayer(false, m_source_input);
         stopPlaying(false);
 
@@ -2149,7 +2149,6 @@ int CTv::StopTvLock ( void )
             LOGE("%s Set CurrentSourceInfo error!\n", __FUNCTION__);
         }
 
-        mFrontDev->Close();
         mTvAction &= ~TV_ACTION_STOPING;
         mTvStatus = TV_STOP_ED;
         MnoNeedAutoSwitchToMonitorMode = false;
