@@ -62,7 +62,6 @@ public:
     void notifyFBCUpgrade(int state __unused, int param __unused) {};
     void onSetDisplayMode(int mode __unused) {};
     void onHdrInfoChange(int newHdrInfo __unused) {};
-    void onAudioEvent(int param1 __unused, int param2 __unused, int param3 __unused, int param4 __unused) {};
     void onDensityChange(int param1 __unused,int param2 __unused, int param3 __unused) {};
     void onScreenColorChange(int newColor);
 

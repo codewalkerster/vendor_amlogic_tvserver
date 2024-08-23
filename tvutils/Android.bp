@@ -39,6 +39,7 @@ cc_library_static {
 
     include_dirs: [
         "vendor/amlogic/common/frameworks/services",
+        "vendor/amlogic/common/interfaces/droidaudio/default/libdroidaudioclient",
         //"frameworks/native/libs/binder/include",
         "external/jsoncpp/include",
     ],
@@ -49,6 +50,7 @@ cc_library_static {
         "vendor.amlogic.hardware.systemcontrol@1.0",
         "vendor.amlogic.hardware.systemcontrol@1.1",
         "libsystemcontrolservice",
+        "libdroidaudioclient",
         "libpqcontrol",
         "liblog",
         "libbinder",

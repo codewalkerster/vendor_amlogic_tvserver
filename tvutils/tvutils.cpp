@@ -36,6 +36,7 @@
 #include "include/tvconfig.h"
 #include "include/tvutils.h"
 #include "include/CTvLog.h"
+#include "DroidAudioManager.h"
 
 #include <vector>
 #include <map>
@@ -460,13 +461,8 @@ int tvGetDisplaymode(int source_input)
 int tvsetAudioParam(int param1, int param2, int param3, int param4)
 {
     int s32Ret = -1;
-    const sp<SystemControlClient> &sws = getSystemControlService();
-    if (sws != nullptr) {
-        s32Ret = sws->setAudioParam(param1,param2,param3,param4);
-        return s32Ret;
-    }
-    return -1;
-
+    s32Ret = DroidAudioManager::setAudioCmdParam(param1, param2, param3, param4);
+    return s32Ret;
 }
 
 int Tv_MiscRegs(const char *cmd)

@@ -97,6 +97,7 @@ include_dirs: [
         "libmediahal_tsplayer",
         "libamdvr",
         "libvideotunnel",
+        "libdroidaudioclient",
     ],
     cflags: [
         "-DSUPPORT_ADTV",

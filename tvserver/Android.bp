@@ -117,7 +117,8 @@ cc_binary {
         "libicuuc_vendor",
         "libmediahal_tsplayer",
         "libamdvr",
-	"libvideotunnel",
+        "libvideotunnel",
+        "libdroidaudioclient",
     ],
 
     include_dirs: [
